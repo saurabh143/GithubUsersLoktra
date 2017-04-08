@@ -21,7 +21,7 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
         self.getRailsCommits(accessToken: token!)
     }
     
-    
+    //MARK:- get first 25 commits 
     func getRailsCommits(accessToken: String) {
         let urlString = "https://api.github.com/repos/rails/rails/commits?per_page=25"
         if let url = NSURL(string: urlString) {
@@ -60,6 +60,7 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
+    //MARK:- failure alert method
     func showAlertForSomethingWentWrong(){
         let alert = UIAlertController.init(title: "Alert", message: "Commits Not Found.", preferredStyle: .alert)
         let action = UIAlertAction.init(title: "OK", style: .default, handler: nil)
@@ -68,21 +69,20 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
     }
 }
 
+
+//MARK:- table view methods
+
 extension GithubCommitsViewController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.commitsData?.count)!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         let constraintRect = CGSize(width: self.view.frame.size.width - 69, height: CGFloat.greatestFiniteMagnitude)
         let cellObject = self.commitsData?[indexPath.row]
         let stringDesc = "Commit: \(cellObject!.commit!.message!)"
-        
         let fontSize:CGFloat = 13
-
         let boundingBox = stringDesc.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: fontSize)], context: nil)
-        
         return boundingBox.height + 30 + 70
     }
     

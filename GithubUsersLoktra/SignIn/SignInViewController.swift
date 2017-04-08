@@ -27,24 +27,22 @@ class SignInViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         signInWebView.delegate = self
         
-        if let webview = signInWebView {
-            webview.delegate = self
-            let urlString = "https://github.com/login/oauth/authorize?client_id=\(clientId)"
-            if let url = URL(string: urlString) {
-                let req = URLRequest(url: url)
-                webview.loadRequest(req)
-            }
+        let urlString = "https://github.com/login/oauth/authorize?client_id=\(clientId)"
+        if let url = URL(string: urlString) {
+            let req = URLRequest(url: url)
+            signInWebView.loadRequest(req)
         }
-        
+        signInWebView.delegate = self
         // Do any additional setup after loading the view.
     }
-    
+    //MARK:- Login and token
+    // added login here, compare the host with the added callback url and proceed.
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if let url = request.url, url.host == "loktra.com" {
             if let code = url.query?.components(separatedBy: "code=").last {
                 let urlString = "https://github.com/login/oauth/access_token"
-                if let tokenUrl = NSURL(string: urlString) {
-                    let req = NSMutableURLRequest(url: tokenUrl as URL)
+                if let tokenUrl = URL(string: urlString) {
+                    var req = URLRequest(url: tokenUrl)
                     req.httpMethod = "POST"
                     req.addValue("application/json", forHTTPHeaderField: "Content-Type")
                     req.addValue("application/json", forHTTPHeaderField: "Accept")
