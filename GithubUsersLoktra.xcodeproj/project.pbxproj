@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2335892B1E9951B700ED4A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335892A1E9951B700ED4A70 /* AppDelegate.swift */; };
+		233589301E9951B700ED4A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2335892E1E9951B700ED4A70 /* Main.storyboard */; };
+		233589331E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 233589311E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld */; };
+		233589351E9951B700ED4A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233589341E9951B700ED4A70 /* Assets.xcassets */; };
+		233589381E9951B700ED4A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233589361E9951B700ED4A70 /* LaunchScreen.storyboard */; };
+		233589431E99546C00ED4A70 /* GithubUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233589421E99546C00ED4A70 /* GithubUserTableViewCell.swift */; };
+		233589451E99580700ED4A70 /* GithubCommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233589441E99580700ED4A70 /* GithubCommitsViewController.swift */; };
+		2335894B1E99684200ED4A70 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233589481E99684200ED4A70 /* Author.swift */; };
+		2335894C1E99684200ED4A70 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233589491E99684200ED4A70 /* Commit.swift */; };
+		2335894D1E99684200ED4A70 /* Commits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335894A1E99684200ED4A70 /* Commits.swift */; };
+		233589511E9973E900ED4A70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335894F1E9973E900ED4A70 /* HomeViewController.swift */; };
+		233589521E9973E900ED4A70 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233589501E9973E900ED4A70 /* SignInViewController.swift */; };
+		CCAE009E056117789044E4B7 /* Pods_GithubUsersLoktra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBABFD92B0B98DFF3CA1410 /* Pods_GithubUsersLoktra.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		059726ACE38D2C903F26EE82 /* Pods-GithubUsersLoktra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsersLoktra.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubUsersLoktra/Pods-GithubUsersLoktra.release.xcconfig"; sourceTree = "<group>"; };
+		1FBABFD92B0B98DFF3CA1410 /* Pods_GithubUsersLoktra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUsersLoktra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233589271E9951B700ED4A70 /* GithubUsersLoktra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsersLoktra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2335892A1E9951B700ED4A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2335892F1E9951B700ED4A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		233589321E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubUsersLoktra.xcdatamodel; sourceTree = "<group>"; };
+		233589341E9951B700ED4A70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		233589371E9951B700ED4A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		233589391E9951B700ED4A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233589421E99546C00ED4A70 /* GithubUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserTableViewCell.swift; sourceTree = "<group>"; };
+		233589441E99580700ED4A70 /* GithubCommitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCommitsViewController.swift; sourceTree = "<group>"; };
+		233589481E99684200ED4A70 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		233589491E99684200ED4A70 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		2335894A1E99684200ED4A70 /* Commits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commits.swift; sourceTree = "<group>"; };
+		2335894F1E9973E900ED4A70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		233589501E9973E900ED4A70 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		525BBEB808736CBE7F64754B /* Pods-GithubUsersLoktra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsersLoktra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubUsersLoktra/Pods-GithubUsersLoktra.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		233589241E9951B700ED4A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAE009E056117789044E4B7 /* Pods_GithubUsersLoktra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2335891E1E9951B700ED4A70 = {
+			isa = PBXGroup;
+			children = (
+				233589291E9951B700ED4A70 /* GithubUsersLoktra */,
+				233589281E9951B700ED4A70 /* Products */,
+				F94E71A842C5EBD2EB22DDB3 /* Pods */,
+				558D3D0454ADD4255312EE75 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		233589281E9951B700ED4A70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				233589271E9951B700ED4A70 /* GithubUsersLoktra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		233589291E9951B700ED4A70 /* GithubUsersLoktra */ = {
+			isa = PBXGroup;
+			children = (
+				2335892A1E9951B700ED4A70 /* AppDelegate.swift */,
+				2335894E1E9973E900ED4A70 /* SignIn */,
+				233589411E99546C00ED4A70 /* Commits */,
+				2335892E1E9951B700ED4A70 /* Main.storyboard */,
+				233589341E9951B700ED4A70 /* Assets.xcassets */,
+				233589361E9951B700ED4A70 /* LaunchScreen.storyboard */,
+				233589391E9951B700ED4A70 /* Info.plist */,
+				233589311E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld */,
+			);
+			path = GithubUsersLoktra;
+			sourceTree = "<group>";
+		};
+		233589411E99546C00ED4A70 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				233589481E99684200ED4A70 /* Author.swift */,
+				233589491E99684200ED4A70 /* Commit.swift */,
+				2335894A1E99684200ED4A70 /* Commits.swift */,
+				233589441E99580700ED4A70 /* GithubCommitsViewController.swift */,
+				233589421E99546C00ED4A70 /* GithubUserTableViewCell.swift */,
+			);
+			path = Commits;
+			sourceTree = "<group>";
+		};
+		2335894E1E9973E900ED4A70 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				2335894F1E9973E900ED4A70 /* HomeViewController.swift */,
+				233589501E9973E900ED4A70 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		558D3D0454ADD4255312EE75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FBABFD92B0B98DFF3CA1410 /* Pods_GithubUsersLoktra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F94E71A842C5EBD2EB22DDB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				525BBEB808736CBE7F64754B /* Pods-GithubUsersLoktra.debug.xcconfig */,
+				059726ACE38D2C903F26EE82 /* Pods-GithubUsersLoktra.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		233589261E9951B700ED4A70 /* GithubUsersLoktra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2335893C1E9951B700ED4A70 /* Build configuration list for PBXNativeTarget "GithubUsersLoktra" */;
+			buildPhases = (
+				17260D1CF3DA7ECDDD8F5376 /* [CP] Check Pods Manifest.lock */,
+				233589231E9951B700ED4A70 /* Sources */,
+				233589241E9951B700ED4A70 /* Frameworks */,
+				233589251E9951B700ED4A70 /* Resources */,
+				1A4C7B2DAE589B99A57AA214 /* [CP] Embed Pods Frameworks */,
+				1FEDD6F4E900B24EB2A71EA3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GithubUsersLoktra;
+			productName = GithubUsersLoktra;
+			productReference = 233589271E9951B700ED4A70 /* GithubUsersLoktra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2335891F1E9951B700ED4A70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Saurabh Yadav";
+				TargetAttributes = {
+					233589261E9951B700ED4A70 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 233589221E9951B700ED4A70 /* Build configuration list for PBXProject "GithubUsersLoktra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2335891E1E9951B700ED4A70;
+			productRefGroup = 233589281E9951B700ED4A70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				233589261E9951B700ED4A70 /* GithubUsersLoktra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		233589251E9951B700ED4A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233589381E9951B700ED4A70 /* LaunchScreen.storyboard in Resources */,
+				233589351E9951B700ED4A70 /* Assets.xcassets in Resources */,
+				233589301E9951B700ED4A70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17260D1CF3DA7ECDDD8F5376 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A4C7B2DAE589B99A57AA214 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubUsersLoktra/Pods-GithubUsersLoktra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FEDD6F4E900B24EB2A71EA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubUsersLoktra/Pods-GithubUsersLoktra-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		233589231E9951B700ED4A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2335894C1E99684200ED4A70 /* Commit.swift in Sources */,
+				2335894D1E99684200ED4A70 /* Commits.swift in Sources */,
+				233589431E99546C00ED4A70 /* GithubUserTableViewCell.swift in Sources */,
+				233589511E9973E900ED4A70 /* HomeViewController.swift in Sources */,
+				233589331E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld in Sources */,
+				233589521E9973E900ED4A70 /* SignInViewController.swift in Sources */,
+				2335892B1E9951B700ED4A70 /* AppDelegate.swift in Sources */,
+				2335894B1E99684200ED4A70 /* Author.swift in Sources */,
+				233589451E99580700ED4A70 /* GithubCommitsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2335892E1E9951B700ED4A70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2335892F1E9951B700ED4A70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		233589361E9951B700ED4A70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				233589371E9951B700ED4A70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2335893A1E9951B700ED4A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2335893B1E9951B700ED4A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2335893D1E9951B700ED4A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 525BBEB808736CBE7F64754B /* Pods-GithubUsersLoktra.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GithubUsersLoktra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.GithubUsersLoktra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2335893E1E9951B700ED4A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059726ACE38D2C903F26EE82 /* Pods-GithubUsersLoktra.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GithubUsersLoktra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabh.GithubUsersLoktra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		233589221E9951B700ED4A70 /* Build configuration list for PBXProject "GithubUsersLoktra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2335893A1E9951B700ED4A70 /* Debug */,
+				2335893B1E9951B700ED4A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2335893C1E9951B700ED4A70 /* Build configuration list for PBXNativeTarget "GithubUsersLoktra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2335893D1E9951B700ED4A70 /* Debug */,
+				2335893E1E9951B700ED4A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		233589311E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				233589321E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodel */,
+			);
+			currentVersion = 233589321E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodel */;
+			path = GithubUsersLoktra.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2335891F1E9951B700ED4A70 /* Project object */;
+}
