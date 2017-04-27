@@ -94,8 +94,8 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
         
         let bookmarkedObjects = self.commitsData?.filter({$0.isBookmarked == true})
         let commitController = self.storyboard?.instantiateViewController(withIdentifier: "BookmarksViewController") as? BookmarksViewController
-        commitController?.deleteBookmarkDelegate! = self
-        commitController?.bookmarkedObjects = bookmarkedObjects
+//        commitController?.deleteBookmarkDelegate! = self
+//        commitController?.bookmarkedObjects = bookmarkedObjects
         self.navigationController?.pushViewController(commitController!, animated: true)
     
     }
