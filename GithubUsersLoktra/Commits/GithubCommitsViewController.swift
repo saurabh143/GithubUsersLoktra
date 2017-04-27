@@ -11,7 +11,7 @@ import MBProgressHUD
 import SDWebImage
 
 protocol DeleteBookmarkProtocol {
-    func deleteCommitObjectFromCommitData(commitsObject : Commits?)
+    func toggleCommitObjectFromCommitData(commitsObject : Commits?)
 }
 
 class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, DeleteBookmarkProtocol {
@@ -20,25 +20,17 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet weak var githubCommitsTableView: UITableView!
     
-    var deleteBookmarkDelegate : DeleteBookmarkProtocol?
     var token : String?
     var commitsData : [Commits]?
     var filteredData : [Commits]?
     
     var isSearchActivated = false
-    var bookmarkedObjects : [Commits]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if bookmarkedObjects == nil{
-            
-            MBProgressHUD.showAdded(to: self.view, animated: true)
-            self.getRailsCommits(accessToken: token!)
-        }else{
-            commitsData = bookmarkedObjects
-            self.githubCommitsTableView.delegate = self
-            self.githubCommitsTableView.dataSource = self
-        }
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        self.getRailsCommits(accessToken: token!)
         
         self.searchTextField.delegate = self
     }
@@ -94,8 +86,8 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
         
         let bookmarkedObjects = self.commitsData?.filter({$0.isBookmarked == true})
         let commitController = self.storyboard?.instantiateViewController(withIdentifier: "BookmarksViewController") as? BookmarksViewController
-//        commitController?.deleteBookmarkDelegate! = self
-//        commitController?.bookmarkedObjects = bookmarkedObjects
+        commitController?.deleteBookmarkDelegate = self
+        commitController?.commitsData = bookmarkedObjects
         self.navigationController?.pushViewController(commitController!, animated: true)
     
     }
@@ -116,41 +108,38 @@ class GithubCommitsViewController: UIViewController, UITableViewDelegate, UITabl
             objectAtCell = self.filteredData?[(indexPath?.row)!]
             objectAtCell?.isBookmarked = !(objectAtCell?.isBookmarked)!
             
-            if objectAtCell?.isBookmarked == false{
-                deleteBookmarkDelegate?.deleteCommitObjectFromCommitData(commitsObject: objectAtCell)
-            }
             //replace the object in filterdata array
-//            self.filteredData?.remove(at: bookMarkedRow)
-//            if bookMarkedRow == self.filteredData?.count{
-//                bookMarkedRow -= 1
-//            }
-//            self.filteredData?.insert(objectAtCell!, at: bookMarkedRow)
-//            
-//            // replace the object in commits data array
-//            var indexCounterForCommitsArray = 0
-//            for commitObj in self.commitsData! {
-//                if commitObj.sha == objectAtCell?.sha{
-//                    break
-//                }else{
-//                    indexCounterForCommitsArray+=1
-//                }
-//            }
-//            
-//            self.commitsData?.remove(at: indexCounterForCommitsArray)
-//            if indexCounterForCommitsArray == self.commitsData?.count{
-//               indexCounterForCommitsArray-=1
-//            }
-//            self.commitsData?.insert(objectAtCell!, at: indexCounterForCommitsArray)
+            self.filteredData?.remove(at: bookMarkedRow)
+            if bookMarkedRow == self.filteredData?.count{
+                bookMarkedRow -= 1
+            }
+            self.filteredData?.insert(objectAtCell!, at: bookMarkedRow)
+            
+            // replace the object in commits data array
+            var indexCounterForCommitsArray = 0
+            for commitObj in self.commitsData! {
+                if commitObj.sha == objectAtCell?.sha{
+                    break
+                }else{
+                    indexCounterForCommitsArray+=1
+                }
+            }
+            
+            self.commitsData?.remove(at: indexCounterForCommitsArray)
+            if indexCounterForCommitsArray == self.commitsData?.count{
+               indexCounterForCommitsArray-=1
+            }
+            self.commitsData?.insert(objectAtCell!, at: indexCounterForCommitsArray)
             
         }else{
             objectAtCell = self.commitsData?[(indexPath?.row)!]
             objectAtCell?.isBookmarked = !(objectAtCell?.isBookmarked)!
-            //replace the object in filterdata array
-//            self.commitsData?.remove(at: bookMarkedRow)
-//            if bookMarkedRow == self.filteredData?.count{
-//                bookMarkedRow -= 1
-//            }
-//            self.commitsData?.insert(objectAtCell!, at: bookMarkedRow)
+//            replace the object in filterdata array
+            self.commitsData?.remove(at: bookMarkedRow)
+            if bookMarkedRow == self.filteredData?.count{
+                bookMarkedRow -= 1
+            }
+            self.commitsData?.insert(objectAtCell!, at: bookMarkedRow)
         }
         
 
@@ -197,7 +186,7 @@ extension GithubCommitsViewController{
         commitCell.userNameLabel.text = cellObject?.author?.login
         commitCell.userImageView.sd_setImage(with: URL.init(string: (cellObject?.author?.avatar_url)!))
         commitCell.bookmarkButton.addTarget(self, action: #selector(bookmarkToCell(sender:)), for: .touchUpInside)
-        if (cellObject?.isBookmarked)! && self.bookmarkedObjects == nil{
+        if (cellObject?.isBookmarked)!{
             commitCell.bookmarkButton.setTitle("yes", for: .normal)
         }else{
             
@@ -231,17 +220,13 @@ extension GithubCommitsViewController{
         return true
     }
 
-    func deleteCommitObjectFromCommitData(commitsObject: Commits?) {
+    func toggleCommitObjectFromCommitData(commitsObject: Commits?) {
 
-        var indexCounterForCommitsArray = 0
         for commitObj in self.commitsData! {
             if commitObj.sha == commitsObject?.sha{
-                break
-            }else{
-                indexCounterForCommitsArray+=1
+                commitsObject?.isBookmarked = !(commitsObject?.isBookmarked)!
             }
         }
-        self.commitsData?.remove(at: indexCounterForCommitsArray)
         self.githubCommitsTableView.reloadData()
     }
 }
