@@ -15,6 +15,7 @@ class GithubUserTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var commitIdLabel: UILabel!
     @IBOutlet weak var commitMessageLabel: UILabel!
+    @IBOutlet weak var bookmarkButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

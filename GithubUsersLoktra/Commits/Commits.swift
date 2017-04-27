@@ -15,7 +15,9 @@ public class Commits {
 	public var html_url : String?
 	public var comments_url : String?
 	public var author : Author?
+    public var isBookmarked : Bool?
 
+    
     public class func modelsFromDictionaryArray(array:NSArray) -> [Commits]
     {
         var models:[Commits] = []
@@ -33,6 +35,7 @@ public class Commits {
 		url = dictionary["url"] as? String
 		html_url = dictionary["html_url"] as? String
 		comments_url = dictionary["comments_url"] as? String
+        isBookmarked = false
 		if (dictionary["author"] != nil) { author = Author(dictionary: dictionary["author"] as! NSDictionary) }
 	}
 
@@ -47,7 +50,7 @@ public class Commits {
 		dictionary.setValue(self.html_url, forKey: "html_url")
 		dictionary.setValue(self.comments_url, forKey: "comments_url")
 		dictionary.setValue(self.author?.dictionaryRepresentation(), forKey: "author")
-		
+		dictionary.setValue(false, forKey: "isBookmarked")
 		return dictionary
 	}
 

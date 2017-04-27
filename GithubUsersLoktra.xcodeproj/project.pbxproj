@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		232966FF1EB24B6100F90AC7 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232966FE1EB24B6100F90AC7 /* BookmarksViewController.swift */; };
 		2335892B1E9951B700ED4A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335892A1E9951B700ED4A70 /* AppDelegate.swift */; };
 		233589301E9951B700ED4A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2335892E1E9951B700ED4A70 /* Main.storyboard */; };
 		233589331E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 233589311E9951B700ED4A70 /* GithubUsersLoktra.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		059726ACE38D2C903F26EE82 /* Pods-GithubUsersLoktra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUsersLoktra.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubUsersLoktra/Pods-GithubUsersLoktra.release.xcconfig"; sourceTree = "<group>"; };
 		1FBABFD92B0B98DFF3CA1410 /* Pods_GithubUsersLoktra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUsersLoktra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		232966FE1EB24B6100F90AC7 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		233589271E9951B700ED4A70 /* GithubUsersLoktra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsersLoktra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2335892A1E9951B700ED4A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2335892F1E9951B700ED4A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		233589291E9951B700ED4A70 /* GithubUsersLoktra */ = {
 			isa = PBXGroup;
 			children = (
+				232966FE1EB24B6100F90AC7 /* BookmarksViewController.swift */,
 				2335892A1E9951B700ED4A70 /* AppDelegate.swift */,
 				2335894E1E9973E900ED4A70 /* SignIn */,
 				233589411E99546C00ED4A70 /* Commits */,
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232966FF1EB24B6100F90AC7 /* BookmarksViewController.swift in Sources */,
 				2335894C1E99684200ED4A70 /* Commit.swift in Sources */,
 				2335894D1E99684200ED4A70 /* Commits.swift in Sources */,
 				233589431E99546C00ED4A70 /* GithubUserTableViewCell.swift in Sources */,
